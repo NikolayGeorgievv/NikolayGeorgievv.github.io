@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc10db4-7c86-4488-90c1-b1df0d70cc97" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3fc10db4-7c86-4488-90c1-b1df0d70cc97" name="Changes" comment="basic ui">
+      <change afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NikolayGeorgievv.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NikolayGeorgievv.github.io.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/static/images/main-bg-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -35,7 +43,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/skull/coding/Git/NikolayGeorgievv.github.io/.idea/static/images",
+    "last_opened_file_path": "C:/Users/skull/coding/Git/NikolayGeorgievv.github.io/static/images",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,7 +54,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static\images" />
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\.idea\static\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static\css" />
+      <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -57,11 +71,26 @@
       <option name="presentableId" value="Default" />
       <updated>1722012037554</updated>
       <workItem from="1722012039750" duration="220000" />
-      <workItem from="1722012568589" duration="1729000" />
+      <workItem from="1722012568589" duration="1954000" />
+      <workItem from="1722086867434" duration="369000" />
+      <workItem from="1722157050669" duration="13000" />
+      <workItem from="1722338699652" duration="1962000" />
     </task>
+    <task id="LOCAL-00001" summary="basic ui">
+      <created>1722014896302</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722014896302</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="basic ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic ui" />
   </component>
 </project>
