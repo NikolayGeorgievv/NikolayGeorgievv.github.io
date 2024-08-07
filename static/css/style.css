@@ -27,18 +27,21 @@ summary {
 #getStartedBtn {
     font-family: fantasy;
     font-style: italic;
+    color: #2e2840;
 }
 
 #getStartedBtn:hover {
     background-color: #c9b08c;
+    color: white;
 }
 
 #downloadCVBtn {
     font-weight: bold;
 }
 
-#indexHeading, #aboutHeader {
+#indexHeading, #aboutHeader, #aboutFooter, .projectHeader {
     font-family: fantasy;
+    color: #2e2840;
 }
 
 #aboutHeader {
@@ -52,6 +55,11 @@ summary {
 
 }
 
+.projectPara{
+    font-style: italic;
+    font-weight: 600;
+}
+
 .aboutPara {
     margin-top: 10px;
     margin-bottom: 30px;
@@ -62,4 +70,6 @@ summary {
 #indexPara {
     font-family: cursive;
 }
-
+#aboutFooterUL{
+    margin-left: 274px;
+}
