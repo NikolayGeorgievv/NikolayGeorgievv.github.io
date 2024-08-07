@@ -1,12 +1,19 @@
-body{
+body {
+    font-family: Arial, sans-serif;
     background-image: url("/static/images/table-BG.jpg");
 }
 
-#jumbotron {
-    border-radius: 10px;
-    backdrop-filter: blur(3px);
-    margin-top: 35vh;
-    color: white;
+details {
+    margin: 20px;
+}
+
+summary {
+    cursor: pointer;
+}
+
+
+#QnAContainer {
+    width: 1000px;
 }
 
 #myPic {
@@ -17,10 +24,42 @@ body{
     background-color: #e0cca7;
 }
 
+#getStartedBtn {
+    font-family: fantasy;
+    font-style: italic;
+}
+
 #getStartedBtn:hover {
     background-color: #c9b08c;
 }
 
 #downloadCVBtn {
-   font-weight: bold;
+    font-weight: bold;
 }
+
+#indexHeading, #aboutHeader {
+    font-family: fantasy;
+}
+
+#aboutHeader {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.aboutSumm {
+    font-weight: 600;
+    font-style: italic;
+
+}
+
+.aboutPara {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#indexPara {
+    font-family: cursive;
+}
+
