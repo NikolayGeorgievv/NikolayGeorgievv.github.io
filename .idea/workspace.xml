@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc10db4-7c86-4488-90c1-b1df0d70cc97" name="Changes" comment="Education and skills page created." />
+    <list default="true" id="3fc10db4-7c86-4488-90c1-b1df0d70cc97" name="Changes" comment="CV update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +53,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/skull/coding/Git/NikolayGeorgievv.github.io/static/images",
+    "last_opened_file_path": "C:/Users/skull/coding/Git/NikolayGeorgievv.github.io/static",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -65,9 +65,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static" />
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static\images" />
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static\images\skillsIcons" />
-      <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static" />
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\.idea\static\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -111,6 +111,7 @@
       <workItem from="1725883476674" duration="290000" />
       <workItem from="1726674649682" duration="502000" />
       <workItem from="1727706696727" duration="7986000" />
+      <workItem from="1727716407953" duration="60000" />
     </task>
     <task id="LOCAL-00001" summary="basic ui">
       <created>1722014896302</created>
@@ -249,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727716306530</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="CV update">
+      <option name="closed" value="true" />
+      <created>1727716444244</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1727716444244</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +274,7 @@
     <MESSAGE value="Added what to eat project." />
     <MESSAGE value="About update." />
     <MESSAGE value="Education and skills page created." />
-    <option name="LAST_COMMIT_MESSAGE" value="Education and skills page created." />
+    <MESSAGE value="CV update" />
+    <option name="LAST_COMMIT_MESSAGE" value="CV update" />
   </component>
 </project>
