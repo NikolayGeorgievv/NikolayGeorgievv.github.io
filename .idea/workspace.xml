@@ -4,8 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc10db4-7c86-4488-90c1-b1df0d70cc97" name="Changes" comment="Added what to eat project.">
+    <list default="true" id="3fc10db4-7c86-4488-90c1-b1df0d70cc97" name="Changes" comment="About update.">
+      <change afterPath="$PROJECT_DIR$/educationAndSkills.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/cert/HTMLCSScert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/cert/JAVAOOPcert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/cert/JScert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/cert/MYSQLcert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/cert/SpringAdvcert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/cert/SpringDatacert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/nextBtn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/previousBtn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/agileIcon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/awsIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/dockerIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/gitIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/gradleIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/hibernateIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/jiraIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/mavenIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/mysqlIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/postmanIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/restAPIicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/skillsIcons/springIcon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,25 +49,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "NikolayGeorgievv"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NikolayGeorgievv&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/NikolayGeorgievv/NikolayGeorgievv.github.io.git",
-    "accountId": "543dafc9-1364-496b-ba1b-6163518ca244"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/NikolayGeorgievv/NikolayGeorgievv.github.io.git&quot;,
+    &quot;accountId&quot;: &quot;543dafc9-1364-496b-ba1b-6163518ca244&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2jn9aXeHlDIyjjxKpNNpujSLiWJ" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -68,6 +94,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static\images" />
+      <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static\images\skillsIcons" />
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static" />
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\.idea\static\images" />
     </key>
@@ -76,26 +103,11 @@
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="NikolayGeorgievv.github.io" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="NikolayGeorgievv.github.io" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
       </set>
     </attachedChunks>
   </component>
@@ -125,6 +137,8 @@
       <workItem from="1724757594123" duration="208000" />
       <workItem from="1724758003397" duration="18000" />
       <workItem from="1725883476674" duration="290000" />
+      <workItem from="1726674649682" duration="502000" />
+      <workItem from="1727706696727" duration="7777000" />
     </task>
     <task id="LOCAL-00001" summary="basic ui">
       <created>1722014896302</created>
@@ -239,7 +253,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725883743275</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="About update.">
+      <option name="closed" value="true" />
+      <created>1726674792983</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726674792983</updated>
+    </task>
+    <task id="LOCAL-00018" summary="About update.">
+      <option name="closed" value="true" />
+      <created>1726675088998</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726675088998</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +283,7 @@
     <MESSAGE value="cv update" />
     <MESSAGE value="Added todo project" />
     <MESSAGE value="Added what to eat project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added what to eat project." />
+    <MESSAGE value="About update." />
+    <option name="LAST_COMMIT_MESSAGE" value="About update." />
   </component>
 </project>

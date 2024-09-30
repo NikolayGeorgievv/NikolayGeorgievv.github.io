@@ -39,7 +39,7 @@ summary {
     font-weight: bold;
 }
 
-#indexHeading, #aboutHeader, #aboutFooter, .projectHeader, .nav-link, #contactsHeading {
+#indexHeading, #aboutHeader, #aboutFooter, .projectHeader, .nav-link, #contactsHeading, #certHeader,#skillsHeader, #softSkillsHeader, .soft-skill-item {
     font-family: fantasy;
     color: #2e2840;
 }
@@ -76,4 +76,7 @@ summary {
 #contactMeAnc{
     text-decoration: underline;
     color: inherit;
+}
+#certHeader, #skillsHeader, #softSkillsHeader{
+    text-align: center;
 }
