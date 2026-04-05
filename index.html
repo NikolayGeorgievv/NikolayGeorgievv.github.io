@@ -1,83 +1,829 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nikolay Georgiev — Full-Stack Java Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1a33788db9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="static/css/style.css">
-    <title>Index Page</title>
+    <style>
+        /* ── Reset & Base ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg: #faf8f5;
+            --bg-alt: #f0ede8;
+            --text: #3a3a3a;
+            --text-light: #6b6b6b;
+            --heading: #1e1e1e;
+            --accent: #3d5a80;
+            --accent-hover: #2c4a6e;
+            --accent-light: #e8eef4;
+            --border: #e0ddd8;
+            --card-bg: #ffffff;
+            --font-heading: 'Libre Baskerville', Georgia, serif;
+            --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--heading); }
+
+        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--accent-hover); }
+
+        img { max-width: 100%; height: auto; }
+
+        /* ── Navigation ── */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+            transition: box-shadow 0.3s;
+        }
+
+        .nav-bar.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--heading);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.25rem 0;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--heading);
+            cursor: pointer;
+        }
+
+        /* ── Sections ── */
+        section { padding: 6rem 2rem; }
+
+        .section-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .section-alt { background: var(--bg-alt); }
+
+        /* ── Hero ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 64px;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(61,90,128,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(193,127,89,0.05) 0%, transparent 50%),
+                var(--bg);
+        }
+
+        .hero-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.35rem;
+            color: var(--accent);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-heading);
+            font-style: italic;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 520px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-photo {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--border);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            font-family: var(--font-body);
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
+            color: #fff;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .hero-socials {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        .hero-socials a {
+            color: var(--text-light);
+            font-size: 1.3rem;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .hero-socials a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* ── About ── */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .about-content p {
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .highlight-item i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 0.15rem;
+            flex-shrink: 0;
+        }
+
+        .highlight-item strong {
+            display: block;
+            margin-bottom: 0.2rem;
+            color: var(--heading);
+        }
+
+        .highlight-item span {
+            font-size: 0.92rem;
+            color: var(--text-light);
+        }
+
+        /* ── Projects ── */
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+            transform: translateY(-2px);
+        }
+
+        .project-card.featured {
+            border-color: var(--accent);
+            border-width: 2px;
+        }
+
+        .project-card.featured .project-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-body {
+            padding: 2rem 2.5rem;
+        }
+
+        .project-body h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-stack span {
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        .project-body p {
+            color: var(--text-light);
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+
+        .project-links { display: flex; gap: 0.75rem; }
+
+        .project-img {
+            width: 100%;
+            display: block;
+            border-top: 1px solid var(--border);
+        }
+
+        .project-card.featured .project-img {
+            border-top-color: var(--accent);
+        }
+
+        /* ── Skills ── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-group h4 {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-light);
+        }
+
+        .skill-group ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .skill-group li {
+            font-size: 0.95rem;
+            color: var(--text);
+            padding: 0.4rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-group li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ── Contact ── */
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .contact-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .contact-link i {
+            font-size: 1.1rem;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* ── Animations ── */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-inner > div:last-child {
+                order: -1;
+                display: flex;
+                justify-content: center;
+            }
+
+            .hero-photo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .hero-text h1 { font-size: 2.2rem; }
+            .hero-text p { margin-left: auto; margin-right: auto; }
+            .hero-actions { justify-content: center; }
+            .hero-socials { justify-content: center; }
+
+            .about-content { grid-template-columns: 1fr; }
+
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                border-bottom: 1px solid var(--border);
+                padding: 1rem 2rem;
+                gap: 0.5rem;
+            }
+            .nav-toggle { display: block; }
+
+            .section-title { font-size: 1.7rem; }
+            section { padding: 4rem 1.5rem; }
+
+            .project-body { padding: 1.5rem; }
+            .skills-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid { grid-template-columns: 1fr; }
+            .contact-links { flex-direction: column; align-items: center; }
+        }
+    </style>
 </head>
 <body>
 
-
-
-<nav class="navbar navbar-expand-lg" id="navBar" aria-label="Tenth navbar example">
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contacts.html">Contacts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="educationAndSkills.html">Education and Skills</a>
-                </li>
-            </ul>
-        </div>
+<!-- ── Navigation ── -->
+<nav class="nav-bar" id="navbar">
+    <div class="nav-inner">
+        <a href="#hero" class="nav-logo">N. Georgiev</a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#about" onclick="closeNav()">About</a></li>
+            <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+            <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+            <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+        </ul>
     </div>
 </nav>
 
-<div id="indexPageMainDiv">
-
-    <div class="px-4 py-5 my-5 text-center">
-        <div>
-            <img src="static/images/myPic.jpg" width="200" height="210" id="myPic">
+<!-- ── Hero ── -->
+<section class="hero" id="hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <h1>Nikolay Georgiev</h1>
+            <div class="subtitle">Full-Stack Java Developer</div>
+            <p>I build and ship production web applications from backend to frontend.
+                Currently focused on <a href="https://collectra.site" target="_blank">Collectra</a>
+                — a full-stack collection management platform running on Spring Boot, Angular,
+                PostgreSQL, and AWS.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View my work</a>
+                <a href="static/NikolayGeorgievResume.pdf" download class="btn btn-outline">
+                    <i class="fa-solid fa-download"></i> Download CV
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/NikolayGeorgievv" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/nikolai-georgiev-55b48a1a9" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:nikolay.va.georgiev@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
         </div>
-        <h2 class="display-5 fw-bold" id="indexHeading">Hey! I'm glad you made it!</h2>
-        <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4" id="indexPara">My name is Nikolay and I am a Java developer. Please follow some
-                links around to get to know me better. Have fun exploring my site!</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-lg px-4 gap-3" id="getStartedBtn"
-                        onclick="window.location.href='about.html'">Get started
-                </button>
-                <a href="static/NikolayGeorgievResume.pdf" download>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4" id="downloadCVBtn">
-                        CV <i class="fa-solid fa-download"></i>
-                    </button>
+        <div>
+            <img src="static/images/myPic.jpg" alt="Nikolay Georgiev" class="hero-photo">
+        </div>
+    </div>
+</section>
+
+<!-- ── About ── -->
+<section class="section-alt" id="about">
+    <div class="section-inner fade-in">
+        <div class="section-label">About</div>
+        <h2 class="section-title">Building things that work — and last.</h2>
+        <div class="about-content">
+            <div>
+                <p>I'm a Java developer with hands-on experience across the full stack.
+                    I've designed and shipped production systems with Spring Boot, Angular,
+                    PostgreSQL, Docker, and AWS — from database schema to deployment pipeline.</p>
+                <p>My background is rooted in the Java ecosystem, but I work comfortably across
+                    the entire stack. I care about clean architecture, solid engineering practices,
+                    and writing code that other people can maintain.</p>
+                <p>When I'm not coding, you'll find me reading, kickboxing, or figuring out
+                    what to eat for dinner (which, incidentally, inspired one of my first projects).</p>
+            </div>
+            <div class="about-highlights">
+                <div class="highlight-item">
+                    <i class="fa-solid fa-server"></i>
+                    <div>
+                        <strong>Backend-first approach</strong>
+                        <span>Spring Boot, Hibernate, REST APIs, JWT authentication, Flyway migrations</span>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i class="fa-solid fa-display"></i>
+                    <div>
+                        <strong>Frontend proficiency</strong>
+                        <span>Angular, TypeScript, RxJS, Angular Material, responsive design</span>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i class="fa-solid fa-cloud"></i>
+                    <div>
+                        <strong>Infrastructure & DevOps</strong>
+                        <span>Docker, AWS S3, Cloudflare, Nginx, Linux server administration</span>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <strong>Continuous growth</strong>
+                        <span>SoftUni Java development graduate. Self-driven learner — everything from Angular to DevOps was picked up building and shipping real projects.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Projects ── -->
+<section id="projects">
+    <div class="section-inner">
+        <div class="section-label fade-in">Projects</div>
+        <h2 class="section-title fade-in">Things I've built.</h2>
+
+        <!-- Collectra — Featured -->
+        <div class="project-card featured fade-in">
+            <div class="project-body">
+                <div class="project-badge">Featured Project</div>
+                <h3>Collectra</h3>
+                <div class="project-stack">
+                    <span>Spring Boot</span>
+                    <span>Angular</span>
+                    <span>PostgreSQL</span>
+                    <span>AWS S3</span>
+                    <span>Docker</span>
+                    <span>Cloudflare</span>
+                    <span>JWT Auth</span>
+                    <span>Google Sign-In</span>
+                </div>
+                <p>A full-stack collection and inventory management platform. Features include
+                    dynamic custom fields per category (EAV pattern), photo uploads with S3 storage,
+                    collection sharing via public links, full-text search, maintenance tracking with
+                    analytics, and GDPR-compliant account management. Deployed on a Hetzner VPS
+                    with Docker Compose and served through Cloudflare CDN.</p>
+                <div class="project-links">
+                    <a href="https://collectra.site" target="_blank" class="btn btn-primary">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site
+                    </a>
+                </div>
+            </div>
+            <!-- Replace src with your actual Collectra screenshot -->
+            <img src="static/images/collectra-home-page.png" alt="Collectra application screenshot" class="project-img">
+        </div>
+
+        <!-- Budget Tracker -->
+        <div class="project-card fade-in">
+            <div class="project-body">
+                <h3>Budget Tracker</h3>
+                <div class="project-stack">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>MySQL</span>
+                    <span>AWS</span>
+                    <span>Thymeleaf</span>
+                </div>
+                <p>A web application for tracking personal finances and expenses.
+                    My first project — the one that got me into programming.
+                    Uses Spring Boot with MySQL and integrates email validation.</p>
+                <div class="project-links">
+                    <a href="https://github.com/NikolayGeorgievv/BudgedTrackerProject" target="_blank" class="btn btn-outline">
+                        <i class="fa-brands fa-github"></i> Source
+                    </a>
+                </div>
+            </div>
+            <img src="static/images/budgedTrackerIMG.png" alt="Budget Tracker screenshot" class="project-img">
+        </div>
+
+        <!-- What to Eat -->
+        <div class="project-card fade-in">
+            <div class="project-body">
+                <h3>What to Eat</h3>
+                <div class="project-stack">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Thymeleaf</span>
+                </div>
+                <p>A Spring application that helps you answer the eternal question.
+                    Built as a fun side project to solve a real daily struggle.</p>
+                <div class="project-links">
+                    <a href="https://github.com/NikolayGeorgievv/What-to-eat" target="_blank" class="btn btn-outline">
+                        <i class="fa-brands fa-github"></i> Source
+                    </a>
+                </div>
+            </div>
+            <img src="static/images/whatToEat.png" alt="What to Eat screenshot" class="project-img">
+        </div>
+    </div>
+</section>
+
+<!-- ── Skills ── -->
+<section class="section-alt" id="skills">
+    <div class="section-inner fade-in">
+        <div class="section-label">Skills</div>
+        <h2 class="section-title">Tech stack & tools.</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h4>Backend</h4>
+                <ul>
+                    <li>Java</li>
+                    <li>Spring Boot / Spring Data</li>
+                    <li>Hibernate / JPA</li>
+                    <li>REST API Design</li>
+                    <li>JUnit / Mockito</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h4>Frontend</h4>
+                <ul>
+                    <li>Angular</li>
+                    <li>TypeScript</li>
+                    <li>RxJS</li>
+                    <li>HTML / CSS</li>
+                    <li>JavaScript</li>
+                    <li>Angular Material</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h4>Databases</h4>
+                <ul>
+                    <li>PostgreSQL</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>Flyway Migrations</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h4>Infrastructure & Tools</h4>
+                <ul>
+                    <li>Docker / Docker Compose</li>
+                    <li>AWS S3</li>
+                    <li>Cloudflare CDN / WAF</li>
+                    <li>Nginx</li>
+                    <li>Linux / Ubuntu</li>
+                    <li>Git / GitHub</li>
+                    <li>Maven / Gradle</li>
+                    <li>Postman</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Contact ── -->
+<section id="contact">
+    <div class="section-inner fade-in">
+        <div class="section-label" style="text-align:center;">Contact</div>
+        <h2 class="section-title" style="text-align:center;">Let's connect.</h2>
+        <div class="contact-content">
+            <p>Whether you have a question, a project idea, or just want to say hello
+                — I'd be happy to hear from you.</p>
+            <div class="contact-links">
+                <a href="mailto:nikolay.va.georgiev@gmail.com" class="contact-link">
+                    <i class="fa-solid fa-envelope"></i> nikolay.va.georgiev@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/nikolai-georgiev-55b48a1a9" target="_blank" class="contact-link">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/NikolayGeorgievv" target="_blank" class="contact-link">
+                    <i class="fa-brands fa-github"></i> GitHub
                 </a>
             </div>
         </div>
     </div>
+</section>
 
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-start align-items-center py-3 my-4 border-top">
-            <ul class="nav col-md-4 justify-content-start list-unstyled d-flex">
-                <li class="ms-3"><a class="text-body-secondary" href="https://github.com/NikolayGeorgievv">
-                    <i class="fa-brands fa-github fa-2xl"></i></a></li>
-                <li class="ms-3"><a class="text-body-secondary"
-                                    href="https://www.linkedin.com/in/nikolai-georgiev-55b48a1a9">
-                    <i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="mailto:nikolay.va.georgiev@gmail.com">
-                    <i class="fa-solid fa-envelope fa-2xl"></i></a></li>
-            </ul>
-        </footer>
-    </div>
-</div>
+<!-- ── Footer ── -->
+<footer>
+    &copy; 2026 Nikolay Georgiev
+</footer>
+
+<script>
+    // Navbar scroll shadow
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Close mobile nav on link click
+    function closeNav() {
+        document.querySelector('.nav-links').classList.remove('open');
+    }
+
+    // Scroll fade-in
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

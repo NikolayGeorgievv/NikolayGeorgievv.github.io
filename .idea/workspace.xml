@@ -4,8 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc10db4-7c86-4488-90c1-b1df0d70cc97" name="Changes" comment="Minor styling changes">
+    <list default="true" id="3fc10db4-7c86-4488-90c1-b1df0d70cc97" name="Changes" comment="img update">
+      <change afterPath="$PROJECT_DIR$/static/images/collectra-home-page.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/educationAndSkills.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/cert/HTMLCSScert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/cert/JAVAOOPcert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/cert/JScert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/cert/MYSQLcert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/cert/SpringAdvcert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/cert/SpringDatacert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/py_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/agileIcon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/awsIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/dockerIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/gitIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/gradleIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/hibernateIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/jiraIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/linuxIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/mavenIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/mysqlIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/postmanIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/restAPIicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/springIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/skillsIcons/ubuntuIcon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/table-BG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/todoAppIMG.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,29 +76,29 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/skull/coding/Git/NikolayGeorgievv.github.io/static&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/skull/coding/Git/NikolayGeorgievv.github.io/static/images",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static" />
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static\images" />
+      <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static" />
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\static\images\skillsIcons" />
       <recent name="C:\Users\skull\coding\Git\NikolayGeorgievv.github.io\.idea\static\images" />
     </key>
@@ -80,8 +110,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -116,6 +146,9 @@
       <workItem from="1727716407953" duration="60000" />
       <workItem from="1727725638658" duration="211000" />
       <workItem from="1727943129045" duration="8000" />
+      <workItem from="1728124047672" duration="229000" />
+      <workItem from="1728129888110" duration="39000" />
+      <workItem from="1728297323634" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="basic ui">
       <created>1722014896302</created>
@@ -270,11 +303,45 @@
       <option name="project" value="LOCAL" />
       <updated>1727725836050</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Tech skills addition.">
+      <option name="closed" value="true" />
+      <created>1728124272489</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1728124272489</updated>
+    </task>
+    <task id="LOCAL-00023" summary="CV Update">
+      <option name="closed" value="true" />
+      <created>1728129918522</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1728129918522</updated>
+    </task>
+    <task id="LOCAL-00024" summary="img update">
+      <created>1770415554944</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1770415554944</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basic ui" />
@@ -288,6 +355,9 @@
     <MESSAGE value="Education and skills page created." />
     <MESSAGE value="CV update" />
     <MESSAGE value="Minor styling changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor styling changes" />
+    <MESSAGE value="Tech skills addition." />
+    <MESSAGE value="CV Update" />
+    <MESSAGE value="img update" />
+    <option name="LAST_COMMIT_MESSAGE" value="img update" />
   </component>
 </project>
